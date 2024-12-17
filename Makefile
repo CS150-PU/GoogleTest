@@ -11,7 +11,7 @@ all: bin bin/main.exe
 bin:
 	mkdir -p bin
 
-bin/main.exe: bin src/*.cpp
+bin/main.exe: bin src/*.cpp include/*.h
 	${CPP_COMPILER} ${CFLAGS} -std=${CPP_VERSION} -o bin/main.exe src/*.cpp -Iinclude
 
 runMe: bin/main.exe
@@ -20,5 +20,5 @@ runMe: bin/main.exe
 clean:
 	rm -rf bin/main.exe  bin/*.o bin/main.dSYM pdfs/*.pdf
 
-valgrind:	all
+valgrind:
 		valgrind ${VALGRIND_FLAGS} bin/main.exe
