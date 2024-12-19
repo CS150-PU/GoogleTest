@@ -1,6 +1,9 @@
+# CMakeLists.txt at the root of the project
+
 cmake_minimum_required(VERSION 3.0)
 
-set(This Calculator)
+# Name SampleClass needs to match one of the Source names.
+set(This SampleClass)
 
 project(${This} C CXX)
 set(CMAKE_C_STANDARD 99)
@@ -12,12 +15,12 @@ enable_testing()
 add_subdirectory(googletest)
 
 set (Headers
-    include/Calculator.h
+    include/SampleClass.h
     include/Rectangle.h
 )
 
 set (Sources
-    src/Calculator.cpp
+    src/SampleClass.cpp
     src/Rectangle.cpp
 )
 

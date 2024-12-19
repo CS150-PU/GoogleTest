@@ -1,3 +1,9 @@
+#pragma once
+
+#include <iostream>
+
+using namespace std;
+
 class Rectangle {
 public:
   void setLength (double length);

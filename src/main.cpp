@@ -9,13 +9,13 @@
 //******************************************************************************
 
 #include <iostream>
-#include "../include/Calculator.h"
+#include "../include/SampleClass.h"
 
 using namespace std;
 
 
 int main () {
-  Calculator calc;
+  SampleClass calc;
   int a = 10, b = 5;
 
   cout << "Addition: " << calc.add (a, b) << endl;

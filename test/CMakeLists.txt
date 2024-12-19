@@ -1,16 +1,22 @@
+# CMakeLists.txt for test directory
+
 cmake_minimum_required(VERSION 3.0)
 
-set(This ExampleTests)
+set(This TestsToRun)
 
+# Add unit test .cpp files which are in directory test
 set(Sources
-    ExampleTests.cpp
+    SampleClassTests.cpp
     RectangleTests.cpp
 )
 
 add_executable(${This} ${Sources})
+
+# Name SampleClass name comes from the name set(This SampleClass) 
+# in the root CMakeLists.txt
 target_link_libraries(${This} PUBLIC
     gtest_main
-    Calculator
+    SampleClass
 )
 
 add_test(
